@@ -1,0 +1,352 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block head %}
+    <link rel="icon" href="{% static 'img/icons/icon.png' %}" type="image/x-icon" />
+    <title>Subam</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+
+    <!-- Fonts -->
+</head>
+<style>
+    .nav-link {
+        color: #3ea137;
+    }
+
+    .nav-link:hover {
+        color: #d5820d;
+        text-decoration: underline;
+        text-decoration-color: #3ea137;
+        transition: 0.8s ease-in-out;
+    }
+
+    .zodiacs {
+        opacity: 0.5;
+        transition: 0.6s ease-in-out;
+    }
+
+    .zodiacs:hover {
+        cursor: pointer;
+        opacity: 1;
+        transition: 0.6s;
+    }
+</style>
+
+<body>
+
+    {% block primaryNavbar %}
+    <div class="navbar d-flex justify-content-between" style="background-color: #bbd6b9;">
+        <h6 class="ms-3 fw-regular mt-1" style="color:#066100">Email: subammatrimony@gmail.com</h6>
+        <h6 class="me-3 fw-regular mt-1" style="color:#066100">Contact: +91 98765 43210</h6>
+    </div>
+    {% endblock %}
+
+    {% block mainNavbar %}
+    <nav class="navbar navbar-expand-lg shadow-sm">
+        <div class="container">
+            <div class="navbar-brand d-flex align-items-center justify-content-between">
+                <img src="{% static 'img/Kalash.png' %}" alt="Logo" width="54" height="54"
+                    class="d-inline-block align-text-top mb-2" style="filter: drop-shadow(75 75 75 #000);" />
+                <a class="navbar-brand" href="#" style="color: #3ea137;">
+                    <h2 class="mt-1">
+                        SRI <span class="fw-bold" style="color: #d5820d;">SUBAM</span> MATRIMONY
+                    </h2>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item rounded" style="text-decoration: underline; text-decoration-color: #3ea137;">
+                        <a class="nav-link active fw-bolder" style="color:#faac40; font-size: large;"
+                            aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:large;" href="#">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:large;" href="#">Matching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:large;" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="btn btn-outline-warning ms-5">Register</button>
+
+        </div>
+    </nav>
+    {% endblock %}
+
+
+    {% block hero %}
+    <div class="background-image">
+        <img src="https://images.pexels.com/photos/4022211/pexels-photo-4022211.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Img" height="800px" width="100%"
+            style="object-fit: cover; opacity: 1; filter: hue-rotate(45deg);" />
+    </div>
+
+
+    <!-- https://images.pexels.com/photos/4022211/pexels-photo-4022211.jpeg?auto=compress&cs=tinysrgb&w=1600 -->
+
+<!-- 
+    https://images.pexels.com/photos/96627/pexels-photo-96627.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Img" height="800px" width="100%" -->
+
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5 position-absolute bg-success rounded-4 shadow-lg"
+        style="top:250px; left:320px;">
+        <div class="row align-items-center">
+            <div class="p-4 col-lg-7 text-center text-lg-start text-white ">
+                <h1 class="display-6 fw-medium lh-1 mt-4">Welcome to</h1>
+                <h1 class="fw-bold display-4" style="color:#f69f26; font-style: italic; font-family:cursive;">SRI <span
+                        style="color: #f5b862;">SUBAM</span>
+                    MATRIMONY</h1>
+                <p class="col-lg-10 fs-5 mb-4" style="text-align: justify;">&nbsp;We are delighted to have you join our
+                    vibrant community dedicated to
+                    helping individuals discover their lifelong partners.Join us today and let the enchantment of love
+                    unfold as you embark on this remarkable chapter of your life.</p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-4">
+                <form class="p-md-5 border rounded-3 bg-body-tertiary">
+                    <h5 class="text-center mb-3" style="color:#d5820d">Login to continue</h5>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput" class="text-success">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword" class="text-success">Password</label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-outline-success" type="submit">LOGIN</button>
+                    <hr class="my-4">
+                    <small class="text-body-secondary">By clicking Login, you agree to the terms of use.</small>
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+
+    {% block aboutUs %}
+    <div class="container d-flex flex-column align-items-center">
+        <h2 class="text-center mt-4 p-3 mb-3" style="color:#d5820d">ABOUT US</h2>
+        <p class="text-center fs-5">At <span class="fw-bold" style="color: #3ea137;">SRI SUBAM MATRIMONY</span>, we
+            prioritize your happiness and strive to create a supportive
+            and secure environment for individuals seeking a life partner. Our mission is to bring together like-minded
+            individuals who share cultural values, traditions, and aspirations, fostering lasting and meaningful
+            relationships.</p>
+
+    </div>
+    <section class="container-fluid" style="background-color: #bbd6b9;">
+        <div class="container mb-4 mt-3">
+            <div class="row align-items-center py-3">
+                <p></p>
+            </div>
+            <div class="row align-items-md-stretch py-5">
+                <div class="col-md-4">
+                    <div
+                        class="zodiacs h-100 p-5 bg-body-tertiary rounded-5 d-flex flex-column justify-content-center align-items-center">
+                        <img src="{% static 'img/zodiacLogo.png' %}" alt="Logo" height="108px" width="108px" />
+                        <h2 class="text-center" style="color:#d5820d">Zodiac Matching</h2>
+                        <p class="text-center" style="color:#d5820d">We are keen in matching the right pair using the
+                            accurate zodiac matching softwares and with expert astrologers</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div
+                        class="zodiacs h-100 p-5 text-bg-success  border rounded-5 d-flex flex-column justify-content-center align-items-center">
+                        <img src="{% static 'img/trust-icon.png' %}" alt="Logo" height="108px" width="108px" />
+                        <h2 class="text-center">Verified profiles</h2>
+                        <p class="text-center">All the profiles are verified , it makes the user to interact seamlessly.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div
+                        class="zodiacs h-100 p-5 bg-body-tertiary border rounded-5 d-flex flex-column justify-content-center align-items-center">
+                        <img src="{% static 'img/sheild.png' %}" alt="Logo" height="108px" width="108px" />
+                        <h2 class="text-center" style="color:#d5820d">Highly secure</h2>
+                        <p class="text-center">We offer the assurance for the security of your data which meets our
+                            terms and conditions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    {% endblock %}
+
+
+
+
+    {% block gettingStarted %}
+    <div class="container d-flex flex-column align-items-center">
+        <h2 class="text-center mt-3 p-3 mb-3" style="color:#d5820d">GETTING STARTED</h2>
+        <p class="text-center fs-5 ">Join the vibrant community in almost every platforms. We offer a app in every
+            platform.<br>Scan the QR code below to install directly in your device.</p>
+
+    </div>
+    <section class="container-fluid p-4 mt-3" style="background-color: antiquewhite; ;">
+        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 align-items-center justify-content-center">
+            <div class="row bg-body-tertiary p-5 rounded-4 d-flex align-items-center" style="width:1200px;background-image: url(https://images.unsplash.com/photo-1601121868898-4581104b29de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80) ;">
+                <div class="col-7 p-2">
+                    <h3 class="fw-regular ms-3 py-5 text-white">Stay <span class="fw-bold fs-2" style="color: #f5b862;">CONNECTED</span> with
+                        mobile applications<br>built exclusively for every platforms.</h3>
+                    <img src="{% static 'img/images.png' %}" alt="Googleplaybutton" width="400px" height="210px"
+                        style="object-fit: contain;" />
+                </div>
+                <div class="col-5 p-4 rounded-4" style="background-color:antiquewhite;">
+                    <h3 class="fw-medium text-center py-5" style="color:#d5820d">SCAN TO DOWNLOAD</h3>
+                    <img class="ms-3" src="{% static 'img/frame.png' %}" alt="Googleplaybutton" width="400px"
+                        height="210px" style="object-fit: contain;" />
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    {% endblock %}
+
+    {% block container %}
+    <section>
+        <div class="container d-flex flex-column align-items-center justify-content-center p-4 rounded-4 bg-success mt-4 mb-4 px-3" style="height: 200px;">
+            <p class="fs-5 text-white p-3"><span class="fw-bold fs-4" style="color: #d5820d;"> SRI <span class="text-white">SUBAM</span> MATRIMONY </span>is the most reliable matrimonial site with<br> genuine profiles and more than <span class="fw-bold fs-4" style="color: #d5820d;">150</span> matching successfully carried out</p>
+            <button class="btn btn-lg btn-outline-light ms-3 me-3">REGISTER NOW</button>
+        </div>
+    </section>
+
+    {% endblock %}
+
+
+
+
+
+    <!-- *************************** TESTIMONIALS SECTION ************************* -->
+    {% block review %}
+    <div class="container d-flex flex-column align-items-center">
+        <h2 class="text-center mt-4 p-3 mb-3" style="color:#d5820d">TESTIMONIALS</h2>
+        <p class="text-center fs-5">Our <span class="fw-bold" style="color: #3ea137;">VALUABLE CUSTOMERS'</span> thoughts about our service to mankind. Every single customer gives the highest rating for our service.</p>
+
+    </div>
+    <section class="container-fluid" style="background-color: antiquewhite;">
+        <div class="container mt-3">   
+            <div class="row align-items-md-stretch py-5">
+                <div class="col-md-4">
+                    <div
+                        class="zodiacs h-100 p-5 bg-body-tertiary rounded-5 d-flex flex-column justify-content-center align-items-center">
+                        <img src="https://images.unsplash.com/photo-1616165415772-f5b95c3ae135?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Logo" height="300px" width="300px" class="rounded-4" />
+                        
+                        <p class="text-center mt-4" style="color:#d5820d">"This is the most trustworthy site that I've used so far"</p>
+                        <small class="fw-medium fst-italic fs-5">Mr.RameshKumar</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div
+                        class="zodiacs h-100 p-5  border rounded-5 d-flex flex-column justify-content-center align-items-center" style="background-color: #d5820d;">
+                        <img src="https://www.biyaniphoto.com/wp-content/uploads/2020/09/Indian_Wedding_during_Covid_Austin_TX_01.jpg" alt="Logo" height="300px" width="300px" class="rounded-4" />
+                        
+                        <p class="text-center mt-4" style="color:aliceblue">"All the profiles are verified , it makes the user to interact seamlessly"
+                        </p>
+                        <small class="fw-medium fst-italic fs-5">Mrs.Jayalalitha Lakshmanan</small>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div
+                        class="zodiacs h-100 p-5 bg-body-tertiary border rounded-5 d-flex flex-column justify-content-center align-items-center">
+                        <img src="https://cdn0.weddingwire.in/article/5177/3_2/1280/jpg/37715-tamil-wedding-songs-light-bucket-productions-lead.jpeg" alt="Logo" height="300px" width="300px" class="rounded-4" />
+                        
+                        <p class="text-center mt-4" style="color:#d5820d">"All the profiles are verified , it makes the user to interact seamlessly"
+                        </p>
+                        <small class="fw-medium fst-italic fs-5">Mr.Rajesh kannan</small>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+
+    </section>
+    {% endblock %}
+
+
+
+
+
+
+
+    <!-- ****************Footer section ********************** -->
+
+
+    {% block footer %}
+        <footer style="background-color:#bbd6b9;" class="py-5">
+            <div class="container">
+                <div class="row mb-2">
+                    <div class="col-4 ">
+                        <h5 class="text-center mb-5" style="color:#d5820d;">HELP & SUPPORT</h5>
+                        <ul style="list-style: none;">
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">Help desk</a></li>
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">Feedback</a></li>
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">Frequently Asked Questions</a></li>
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">Complaints</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-4 ">
+                        <h5 class="text-center mb-5" style="color:#d5820d;">INFORMATION</h5>
+                        <ul style="list-style: none;">
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">About us</a></li>
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">Membership plans</a></li>
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">Contact Details</a></li>
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">Location</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h5 class="text-center mb-5" style="color:#d5820d;">SOCIAL HANDLES</h5>
+                        <ul style="list-style: none;">
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">Instagram</a></li>
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">Facebook</a></li>
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">Mail-id</a></li>
+                            <li style="border-bottom: 1px solid gray;" class="py-2 ms-2"><a style="color:#006635;text-decoration: none;" href="#">Complaints</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            
+                 <!-- COPYRIGHTS SECTION -->
+                 <div class="mt-5">
+                    <hr>
+                    <p class="text-muted ms-4 text-center">This website is strictly for matrimonial purpose only and not a dating website.<br>
+                        Copyright © 2023. All rights reserved.</p>
+                 </div>
+            
+            </div>
+           
+        </footer>
+    {% endblock %}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"> </script>
+</body>
+
+</html>
