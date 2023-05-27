@@ -1,0 +1,68 @@
+@media screen and (max-width:2561px) {
+    
+.heading-subam{
+    font-size: 60px;
+}
+}
+
+@media screen and (max-width:1440px) {
+    
+    .heading-subam{
+        font-size: 50px;
+    }
+    
+    }
+    
+
+@media screen and (max-width:1025px) {
+    
+    .heading-subam{
+        font-size: 41px;
+    }
+    
+    }
+
+
+@media screen and (max-width:768px) {
+
+    .heading-subam{
+        font-size: 50px;
+    }
+    
+    }
+
+@media screen and (max-width:576px) {
+
+.heading-subam{
+    font-size: 22px;
+}
+
+}
+
+@media screen and (max-width:375px) {
+
+    .heading-subam{
+        font-size: 19px;
+        width: max-content;
+    }
+
+    
+    }
+    
+
+    
+
+/* **************** MEDIA QUERY SECTION ***************** */
+.offcanvas-body > ul > li{
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    align-items: center;
+}
+.offcanvas-title {
+    text-align: center;
+}
+.offcanvas-body > ul > li:hover a{
+    color: #faac40;
+}
