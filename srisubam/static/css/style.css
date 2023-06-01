@@ -1,3 +1,4 @@
+/* **************** MEDIA QUERY SECTION ***************** */
 @media screen and (max-width:2561px) {
     
 .heading-subam{
@@ -51,8 +52,10 @@
     
 
     
+.offcanvas{
+    background-color: #bbd6b9;
+}
 
-/* **************** MEDIA QUERY SECTION ***************** */
 .offcanvas-body > ul > li{
     display: flex;
     justify-content: center;
@@ -66,3 +69,4 @@
 .offcanvas-body > ul > li:hover a{
     color: #faac40;
 }
+

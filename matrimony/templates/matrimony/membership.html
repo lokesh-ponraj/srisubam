@@ -1,0 +1,133 @@
+{% extends 'matrimony/template.html' %}
+
+{% load static %}
+
+{% block head %}
+<title>Subam | Membership</title>
+{% endblock %}
+
+
+{% block mainNavbar %}
+<!-- ************** NAVBAR SECTION ************** -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg">
+    <div class="container-fluid">
+        <div class="navbar-brand d-flex align-items-center justify-content-between">
+            <img src="{% static 'img/Kalash.png' %}" alt="Logo" width="44" height="44"
+                class="d-flex align-items-center mb-2" style="filter: drop-shadow(75 75 75 #000);" />
+            <a class="navbar-brand " href="#" style="color: #3ea137;">
+                <h2 class="mt-1 fs-5">
+                    SRI <span class="fw-bold" style="color: #d5820d;">SUBAM</span> MATRIMONY
+                </h2>
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <img src="{% static 'img/Kalash.png' %}" alt="Logo" width="44" height="44"
+                    class="d-flex align-items-center mb-2" style="filter: drop-shadow(75 75 75 #000);" />
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: #3ea137;">
+                    SRI <span class="fw-bold" style="color: #d5820d;">SUBAM</span> MATRIMONY
+                    </a></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link " style="font-size:large;"
+                            aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bolder" style="color:#faac40; font-size: large;" href="{% url 'membership' %}">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:large;" href="#">Matching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:large;" href="#">Contact</a>
+                    </li>
+
+                    <a href="{% url 'register' %}"><button
+                            class="btn btn-outline-success ms-2">Register</button></a>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+
+{% block membership %}
+<div class="container d-flex flex-column align-items-center">
+    <h2 class="text-center mt-4 p-3 mb-3" style="color:#d5820d">Membership Plans</h2>
+    <p class="text-center fs-5 ">At <span class="fw-bold" style="color: #3ea137;">SRI SUBAM MATRIMONY</span>, we
+        prioritize your happiness and strive to create a supportive
+        and secure environment for individuals seeking a life partner. Our mission is to bring together like-minded
+        individuals who share cultural values, traditions, and aspirations, fostering lasting and meaningful
+        relationships.</p>
+
+</div>
+<section class="container" >
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-success" >
+            <div class="card-header rounded-3 py-3 bg-white border-success" >
+              <h4 class="my-0 fw-regular">GENERAL</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">₹150<span class="text-body-secondary fw-light fs-4">/month</span></h1>
+              <ul class="list-unstyled mt-3 mb-4 text-success">
+                <li class="text-muted"><i class="uil uil-check-circle"></i> Customer support</li>
+                <li class="text-muted"><i class="uil uil-check-circle"></i> 5 profile visits per day</li>
+                <li class="text-muted"><i class="uil uil-check-circle"></i> Limited Access to profiles</li>
+                <li class="text-muted"><i class="uil uil-check-circle"></i> Limited photo uploads</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-outline-success">Button</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3"style="background-color: #1987545e;">
+              <h4 class="my-0 fw-regular">STANDARD</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">₹299<span class="text-body-secondary fw-light fs-4">/month</span></h1>
+              <ul class="list-unstyled mt-3 mb-4 text-success">
+                <li class="text-muted"><i class="uil uil-check-circle"></i> Accessibility</li>
+                <li class="text-muted"><i class="uil uil-check-circle"></i> Accessibility</li>
+                <li class="text-muted"><i class="uil uil-check-circle"></i> Accessibility</li>
+                <li class="text-muted"><i class="uil uil-check-circle"></i> Accessibility</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-outline-success">Button</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card mb-4 rounded-3 shadow-sm border-success">
+            <div class="card-header py-3 text-bg-success border-success">
+              <h4 class="my-0 fw-regular">PREMIUM</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">₹499<span class="text-body-secondary fw-light fs-4">/month</span></h1>
+              <ul class="list-unstyled mt-3 mb-4 text-success">
+                <li class="text-muted"><i class="uil uil-check-circle"></i> Accessibility</li>
+                <li class="text-muted"><i class="uil uil-check-circle"></i> Accessibility</li>
+                <li class="text-muted"><i class="uil uil-check-circle"></i> Accessibility</li>
+                <li class="text-muted"><i class="uil uil-check-circle"></i> Accessibility</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-success">Button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+
+</section>
+{% endblock %}
+

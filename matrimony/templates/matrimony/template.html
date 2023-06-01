@@ -8,11 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- *************CSS FILES **************** -->
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <!-- ************* TITLE SECTION **************** -->
-    {% block head %}
     <link rel="icon" href="{% static 'img/icons/icon.png' %}" type="image/x-icon" />
+    {% block head %}
     <title>Subam</title>
     {% endblock %}
 
@@ -25,9 +26,9 @@
 <body>
 
     {% block primaryNavbar %}
-    <div class="navbar justify-content-between d-none d-lg-flex d-md-flex" style="background-color: #bbd6b9;">
-        <h6 class="ms-3 fw-regular mt-1" style="color:#066100">Email: subammatrimony@gmail.com</h6>
-        <h6 class="me-3 fw-regular mt-1" style="color:#066100">Contact: +91 98765 43210</h6>
+    <div class="navbar justify-content-between d-none d-lg-flex d-md-flex bg-success">
+        <h6 class="ms-3 fw-regular mt-1 text-white">Email: subammatrimony@gmail.com</h6>
+        <h6 class="me-3 fw-regular mt-1 text-white">Contact: +91 98765 43210</h6>
     </div>
     {% endblock %}
 
@@ -74,7 +75,8 @@
                             <a class="nav-link" style="font-size:large;" href="#">Contact</a>
                         </li>
 
-                        <button class="btn btn-outline-success ms-2">Register</button>
+                        <a href="{% url 'register' %}"><button
+                                class="btn btn-outline-success ms-2">Register</button></a>
 
                     </ul>
                 </div>
@@ -83,257 +85,71 @@
     </nav>
     {% endblock %}
 
+    <!-- *****************$$$$$$$$$$$$$$$$$$$$$$$$$$$  HOME PAGE CONTENT $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ *************************** -->
 
-
-    <!-- ************************ LOGIN POP UP ****************** -->
     {% block hero %}
-    <div class="container-fluid p-xxl-5 p-xl-5 p-lg-5 p-md-5 p-sm-3 p-5"
-        style="background-image: url(https://images.pexels.com/photos/4022211/pexels-photo-4022211.jpeg?auto=compress&cs=tinysrgb&w=1600); height: auto; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover;">
-
-        <div class="container bg-success p-xxl-3 p-xl-4 p-lg-3 py-sm-3 py-2 shadow-lg rounded-5" id="container">
-            <div class="row p-xxl-4 p-xl-4 p-lg-4 p-md-4 p-sm-2 p-4 d-flex align-items-center">
-
-                <div class="col-xxl-7 col-xl-7 col-lg-7 col-sm-12 col-md-12 text-start text-white ">
-                    <h2 class="fw-medium lh-1 mt-4">Welcome to</h2>
-                    <h1 class="heading-subam fw-bold  mb-3"
-                        style="color:#f69f26; font-style: italic; font-family:cursive;">SRI
-                        <span style="color: #f5b862;">SUBAM</span>
-                        MATRIMONY
-                    </h1>
-                    <p class="fs-5 mb-4 d-xxl-flex d-xl-flex d-lg-flex d-md-flex d-none" style="text-align: justify;">We
-                        are delighted to have you join
-                        our
-                        vibrant community dedicated to
-                        helping individuals discover their lifelong partners.Join us today and let the
-                        enchantment of
-                        love
-                        unfold as you embark on this remarkable chapter of your life.</p>
-                </div>
-
-                <div
-                    class="col-xxl-4 col-xl-5 col-lg-5 col-sm-12 col-md-10 offset-sm-0 offset-xxl-1 offset-xl-0 offset-md-1 offset-lg-0">
-                    <form
-                        class="py-xxl-5 px-xxl-4 py-lg-5 px-lg-4 py-md-5 px-md-4 py-sm-3 px-sm-3 p-3 border rounded-3 bg-body-tertiary">
-                        <h5 class="text-center mb-3" style="color:#d5820d">Login to continue</h5>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput" class="text-success">Email address</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword" class="text-success">Password</label>
-                        </div>
-                        <button class="w-100 btn btn-lg btn-outline-success" type="submit">LOGIN</button>
-                        <hr class="my-4">
-                        <small class="text-body-secondary">By clicking Login, you agree to the terms of
-                            use.</small>
-                    </form>
-                </div>
-
-
-            </div>
-        </div>
-    </div>
 
     {% endblock %}
 
-    <!-- ****************************ABOUT US SECTION ****************************** -->
+
+
+    <!-- ************************ ABOUT US BLOCK *****************************-->
+
     {% block aboutUs %}
-    <div class="container d-flex flex-column align-items-center">
-        <h2 class="text-center mt-4 p-3 mb-3" style="color:#d5820d">ABOUT US</h2>
-        <p class="text-center fs-5 ">At <span class="fw-bold" style="color: #3ea137;">SRI SUBAM MATRIMONY</span>, we
-            prioritize your happiness and strive to create a supportive
-            and secure environment for individuals seeking a life partner. Our mission is to bring together like-minded
-            individuals who share cultural values, traditions, and aspirations, fostering lasting and meaningful
-            relationships.</p>
-
-    </div>
-    <section class="container-fluid" style="background-color: #bbd6b9;">
-        <div class="container mb-4 mt-3">
-            <div class="row align-items-center py-3">
-                <p></p>
-            </div>
-            <div class="row align-items-md-stretch py-5">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-12 col-md-12 mb-3">
-                    <div
-                        class="zodiacs h-100 p-5 bg-body-tertiary rounded-5 d-flex flex-column justify-content-center align-items-center">
-                        <img src="{% static 'img/zodiacLogo.png' %}" alt="Logo" height="108px" width="108px" />
-                        <h2 class="text-center" style="color:#d5820d">Zodiac Matching</h2>
-                        <p class="text-center" style="color:#d5820d">We are keen in matching the right pair using the
-                            accurate zodiac matching softwares and with expert astrologers</p>
-                    </div>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-12 col-md-12 mb-3">
-                    <div
-                        class="zodiacs h-100 p-5 text-bg-success  border rounded-5 d-flex flex-column justify-content-center align-items-center">
-                        <img src="{% static 'img/trust-icon.png' %}" alt="Logo" height="108px" width="108px" />
-                        <h2 class="text-center">Verified profiles</h2>
-                        <p class="text-center">All the profiles are verified , it makes the user to interact seamlessly.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-12 col-md-12 mb-3">
-                    <div
-                        class="zodiacs h-100 p-5 bg-body-tertiary border rounded-5 d-flex flex-column justify-content-center align-items-center">
-                        <img src="{% static 'img/sheild.png' %}" alt="Logo" height="108px" width="108px" />
-                        <h2 class="text-center" style="color:#d5820d">Highly secure</h2>
-                        <p class="text-center">We offer the assurance for the security of your data which meets our
-                            terms and conditions</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </section>
 
     {% endblock %}
 
+    <!-- ************************* GETTING STARTED BLOCK ******************** -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- *********************GETTING STARTED ********************** -->
     {% block gettingStarted %}
 
-    <div class="container-fluid p-xxl-5 p-xl-5 p-lg-5 p-md-5 p-sm-3 p-5" style="background-color: antiquewhite;">
-
-        <div class="container bg-success p-xxl-3 p-xl-4 p-lg-3 py-sm-3  shadow-lg rounded-5" id="container"
-            style="background-image: url(https://images.unsplash.com/photo-1601121868898-4581104b29de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80); height: auto; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; -webkit-background-size:cover">
-            <div class="row p-xxl-4 p-xl-5 p-lg-5 p-md-4 p-sm-2 p-3 d-flex align-items-center rounded-5" style="backdrop-filter: blur(5px);">
-
-
-                <div class="col-xxl-7 col-xl-7 col-lg-7 col-sm-12 col-md-12 col-12 text-center text-white offset-sm-0">
-                    <h1 class="fw-bold mb-3" style="color:#FFF;">Stay
-                        <span class="fw-bold" style="color: #fd9400;">CONNECTED</span>
-                        <br>with mobile applications built exclusively for every platforms.
-                    </h1>
-                    <div>
-                        <img class="image-play" src="{% static 'img/images.png' %}" alt="Googleplaybutton" height="200px"
-                        style="object-fit:contain;" />
-                    </div>
-                    
-
-                </div>
-
-                
-                <div class="p-4 rounded-3 col-xxl-4 col-xl-5 col-lg-5 col-sm-12 col-md-6 offset-sm-0 offset-xxl-1 offset-xl-0 offset-md-3 offset-lg-0"
-                    style="background-color: antiquewhite;">
-                    <div
-                        class="d-flex flex-column justify-content-center py-xxl-5 px-xxl-4 py-lg-5 px-lg-4 py-md-5 px-md-4 py-sm-3 px-sm-3 p-3 border rounded-3 bg-body-tertiary">
-
-                        <div class="col-xxl-12 col-xl-6 col-lg-12 col-md-12 col-sm-10 offset-xxl-0 offset-xl-3 offset-lg-0 offset-md-0 offset-sm-1 offset-0">
-                            <h3 class="fw-medium text-center" style="color:#d5820d">SCAN TO DOWNLOAD</h3>
-                        </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-10 col-12 offset-xxl-3 offset-xl-3 offset-lg-2 offset-md-2 offset-sm-1 offset-2">
-                            <img src="{% static 'img/frame.png' %}" alt="Googleplaybutton" height="150px"
-                                style="object-fit: contain;"/>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-
-
     {% endblock %}
+
+
+    <!-- ******************************* CONTAINER SECTION **************************** -->
 
     {% block container %}
-    <section class="px-4">
-        <div
-            class="container d-flex flex-column align-items-center justify-content-center p-4 rounded-4 bg-success mt-4 mb-4 ">
-            <div class="col-12 d-flex flex-column justify-content-center">
-                <p class="fs-5 text-white p-3 text-center"><span class="fw-bold fs-4" style="color: #d5820d;">
-                        SRI <span class="text-white">SUBAM</span> MATRIMONY </span>
-                    is the most reliable matrimonial site with genuine profiles and more than
-                    <span class="fw-bold fs-4" style="color: #d5820d;">150 +</span> matching carried out.
-                </p>
-            </div>
-            <div class="col-xxl-2 col-xl-2 col-lg-3 col-sm-12 col-md-3 mb-3">
-                <button class="btn btn-lg btn-outline-light">REGISTER NOW</button>
-            </div>
-
-        </div>
-    </section>
 
     {% endblock %}
 
 
 
+    <!-- ****************************** TESTIMONIALS SECTION ************************** -->
 
 
-    <!-- *************************** TESTIMONIALS SECTION ************************* -->
     {% block review %}
-    <div class="container d-flex flex-column align-items-center">
-        <h2 class="text-center mt-4 p-3 mb-3" style="color:#d5820d">TESTIMONIALS</h2>
-        <p class="text-center fs-5">Our <span class="fw-bold" style="color: #3ea137;">VALUABLE CUSTOMERS'</span>
-            thoughts about our service to mankind. Every single customer gives the highest rating for our service.</p>
 
-    </div>
-    <section class="container-fluid" style="background-color: antiquewhite;">
-        <div class="container mt-3">
-            <div class="row align-items-md-stretch py-5">
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-12 col-md-12 mb-3">
-                    <div
-                        class=" p-5 bg-body-tertiary rounded-5 d-flex flex-column justify-content-center align-items-center">
-                        <img src="https://images.unsplash.com/photo-1616165415772-f5b95c3ae135?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
-                            alt="Logo" height="300px" width="280px" class="rounded-4" />
-
-                        <p class="text-center mt-4" style="color:#d5820d">"This is the most trustworthy site that I've
-                            used so far"</p>
-                        <small class="fw-medium fst-italic fs-5">Mr.RameshKumar</small>
-                    </div>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-12 col-md-12 mb-3">
-                    <div class="zodiacs  p-5  border rounded-5 d-flex flex-column justify-content-center align-items-center"
-                        style="background-color: #d5820d;">
-                        <img src="https://www.biyaniphoto.com/wp-content/uploads/2020/09/Indian_Wedding_during_Covid_Austin_TX_01.jpg"
-                            alt="Logo" height="300px" width="280px" class="rounded-4" />
-
-                        <p class="text-center mt-4" style="color:aliceblue">"All the profiles are verified , it makes
-                            the user to interact seamlessly"
-                        </p>
-                        <small class="fw-medium fst-italic fs-5">Mrs.Jayalalitha</small>
-                    </div>
-                </div>
-                <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-12 col-md-12 mb-3">
-                    <div
-                        class="zodiacs p-5 bg-body-tertiary border rounded-5 d-flex flex-column justify-content-center align-items-center">
-                        <img src="https://i.pinimg.com/236x/b6/cc/40/b6cc4009f83097c0b3bcbc415ba84543.jpg" alt="Logo"
-                            height="300px" width="280px" class="rounded-4" />
-
-                        <p class="text-center mt-4" style="color:#d5820d">"All the profiles are verified , it makes the
-                            user to interact seamlessly"
-                        </p>
-                        <small class="fw-medium fst-italic fs-5">Mr.Rajesh kannan</small>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-
-    </section>
     {% endblock %}
+
+
+
+
+    <!-- ********************************************************************************************************* -->
+
+
+
+
+
+    <!-- **************************$$$$$$$$$$$$$$$$$$$$$$$$ REGISTER PAGE CONTENT $$$$$$$$$$$$$$$$$$$$*********************** -->
+
+
+
+    <!-- ***************** REGISTER BLOCK *************** -->
+
+    {% block register %}
+
+    {% endblock %}
+
+
+
+
+    <!-- **************************$$$$$$$$$$$$$$$$$$$$$$$$ MEMBERSHIP PAGE CONTENT $$$$$$$$$$$$$$$$$$$$*********************** -->
+
+
+{% block membership %}
+
+{% endblock %}
+
 
 
 
@@ -347,7 +163,7 @@
     {% block footer %}
     <footer style="background-color:#bbd6b9;" class="py-5">
         <div class="container">
-            <div class="row mb-2">
+            <div class="row ">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-sm-12 col-md-12 mb-3">
                     <h5 class="text-center mb-5" style="color:#d5820d;">HELP & SUPPORT</h5>
                     <ul style="list-style: none;">
@@ -393,17 +209,28 @@
                 </div>
             </div>
 
-            <!-- ******************COPYRIGHTS SECTION****************** -->
-            <div class="mt-5">
-                <hr>
-                <p class="text-muted ms-4 text-center">This website is strictly for matrimonial purpose only and not a
+
+
+        </div>
+
+
+    </footer>
+    {% endblock %}
+
+    {% block copyRights %}
+    <!-- ******************COPYRIGHTS SECTION****************** -->
+    <footer>
+        <div class="container-fluid bg-success ">
+            <div class="container p-3">
+                <p class="text-white text-center mt-3">This website is strictly for matrimonial purpose only and not
+                    a
                     dating website.<br>
                     Copyright © 2023. All rights reserved.</p>
             </div>
 
         </div>
-
     </footer>
+
     {% endblock %}
 
 
