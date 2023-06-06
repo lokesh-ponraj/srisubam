@@ -1,0 +1,81 @@
+{% extends 'matrimony/template.html' %}
+{% load static %}
+{% block head %}
+<title>Subam | Contact</title>
+{% endblock %}
+
+
+
+{% block mainNavbar %}
+<!-- ************** NAVBAR SECTION ************** -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg">
+    <div class="container-fluid">
+        <div class="navbar-brand d-flex align-items-center justify-content-between">
+            <img src="{% static 'img/Kalash.png' %}" alt="Logo" width="44" height="44"
+                class="d-flex align-items-center mb-2" style="filter: drop-shadow(75 75 75 #000);" />
+            <a class="navbar-brand " href="#" style="color: #3ea137;">
+                <h2 class="mt-1 fs-5">
+                    SRI <span class="fw-bold" style="color: #d5820d;">SUBAM</span> MATRIMONY
+                </h2>
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <img src="{% static 'img/Kalash.png' %}" alt="Logo" width="44" height="44"
+                    class="d-flex align-items-center mb-2" style="filter: drop-shadow(75 75 75 #000);" />
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: #3ea137;">
+                    SRI <span class="fw-bold" style="color: #d5820d;">SUBAM</span> MATRIMONY
+                    </a></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link " style="font-size:large;" aria-current="page"
+                            href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " style="font-size:large;" href="{% url 'membership' %}">Membership</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="font-size:large;" href="#">Matching</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bolder" style="color:#faac40; font-size: large;"
+                            href="{% url 'contact' %}">Contact</a>
+                    </li>
+
+                    <a href="{% url 'register' %}"><button class="btn btn-outline-success ms-2">Register</button></a>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block contact %}
+<div class="container d-flex flex-column align-items-center">
+    <h2 class="text-center mt-4 p-3 mb-3" style="color:#d5820d">Contact Us</h2>
+    <p class="text-center fs-5 ">Contact <span class="fw-bold" style="color: #3ea137;">SRI SUBAM MATRIMONY helpline</span>, which is 24/7. We are striving and looking forward to create a immediate and secure support for individuals who finds a problem with the Sri Subam Matrimony Application. Our mission is to bring together like-minded individuals who share cultural values, traditions, and aspiration fostering lasting and meaningful relationships.For that we work very hard to make people happy at the end of the day.</p>
+</div>
+
+<div class="container mt-3 border border-success rounded-2">
+    <h2 class="text-center mt-3" style="color: #d5820d;">Contact Details</h2>
+    <hr />
+    <div class="card">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-6">
+                Contact details
+            </div>
+            <div class="col-6">
+                Contact details
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
