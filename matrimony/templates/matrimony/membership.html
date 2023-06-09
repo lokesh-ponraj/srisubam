@@ -44,7 +44,7 @@
                         <a class="nav-link active fw-bolder" style="color:#faac40; font-size: large;" href="{% url 'membership' %}">Membership</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="font-size:large;" href="#">Matching</a>
+                        <a class="nav-link" style="font-size:large;" href="{% url 'index' %}">Matching</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" style="font-size:large;" href="{% url 'contact' %}">Contact</a>
@@ -86,7 +86,7 @@
                 <li class="text-muted"><i class="uil uil-check-circle"></i> Limited Access to profiles</li>
                 <li class="text-muted"><i class="uil uil-check-circle"></i> Limited photo uploads</li>
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-outline-success">Buy now</button>
+              <a  href="{% url 'index' %}" class="w-100 btn btn-lg btn-outline-success">Buy now</a >
             </div>
           </div>
         </div>
@@ -103,7 +103,7 @@
                 <li class="text-muted"><i class="uil uil-check-circle"></i> Complete access to profiles</li>
                 <li class="text-muted"><i class="uil uil-check-circle"></i> View limited requests</li>
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-outline-success">Buy now</button>
+              <a  href="{% url 'index' %}" class="w-100 btn btn-lg btn-outline-success">Buy now</a >
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@
                 <li class="text-muted"><i class="uil uil-check-circle"></i> Verified Account</li>
                 <li class="text-muted"><i class="uil uil-check-circle"></i> Extra security for data</li>
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-success">Buy now</button>
+              <a  href="{% url 'index' %}" class="w-100 btn btn-lg btn-success">Buy now</a >
             </div>
           </div>
         </div>

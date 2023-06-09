@@ -25,6 +25,11 @@ def register(request):
 
 
 
+def matching(request):
+    return render(request, 'matrimony/matching.html')
+
+
+
 def membership(request):
     return render(request, 'matrimony/membership.html')
 

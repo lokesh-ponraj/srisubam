@@ -201,20 +201,43 @@
 
         </div>
 
-        <div class="col-9 pt-3  d-flex justify-content-center">
+        <div class="col-9 pt-3 d-flex justify-content-center">
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary " style="width: 100%;">
                 <div class="card">
-                    <div class="card-header text-danger">
-                        Premium
-                    </div>
                     <div class="card-body">
-                        <div class="row">
-                            <div class="col">
-                                <img src="{% static 'img/users/profile.jpg' %}" class="card-img-top" alt="Profilepic">
+                        <div class="row gap-1 align-items-center justify-content-between ms-2 me-2">
+                            <div class="col-2">
+                                <img src="{% static 'img/users/profile.jpg' %}" height="200px"
+                                    class="card-img-top rounded-3" alt="Profilepic">
                             </div>
-                            <div class="col">
-                                <p class="card-text">With supporting text below as a natural lead-in to additional
-                                    content.</p>
+                            <div class="col-7">
+                                <div class="d-flex align-items-center justify-content-start gap-3 mb-2">
+                                    <small class="text-danger">Premium <i class="uil uil-award"></i></small>
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h3 class="text-secondary-emphasis">Elizabeth <i
+                                            class="uil uil-check-circle text-success fs-5"></i></h3>
+                                    <p class="text-body-tertiary">Profile created by <span
+                                            class="fw-semibold">Parent</span></p>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <p class="text-muted">Age: <span class="text-danger">28 years</span></p>
+                                    <p class="text-muted">Height: <span class="text-danger">5'11"</span></p>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <p class="text-muted">Caste: <span class="text-danger">BC</span></p>
+                                    <p class="text-muted">Religion: <span class="text-danger">Hindu</span></p>
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <p class="text-muted">B.Tech.,</p>
+                                    <p class="text-muted">Software Developer</p>
+                                    <p class="text-danger">Gudimangalam, Tiruppur</p>
+                                    
+                                </div>
+
+
+                            </div>
+                            <div class="col-2 d-flex align-items-center justify-content-center">
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>

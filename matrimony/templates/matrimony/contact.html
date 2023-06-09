@@ -42,7 +42,7 @@
                         <a class="nav-link " style="font-size:large;" href="{% url 'membership' %}">Membership</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="font-size:large;" href="#">Matching</a>
+                        <a class="nav-link" style="font-size:large;" href="{% url 'index' %}">Matching</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active fw-bolder" style="color:#faac40; font-size: large;"
@@ -64,18 +64,52 @@
     <p class="text-center fs-5 ">Contact <span class="fw-bold" style="color: #3ea137;">SRI SUBAM MATRIMONY helpline</span>, which is 24/7. We are striving and looking forward to create a immediate and secure support for individuals who finds a problem with the Sri Subam Matrimony Application. Our mission is to bring together like-minded individuals who share cultural values, traditions, and aspiration fostering lasting and meaningful relationships.For that we work very hard to make people happy at the end of the day.</p>
 </div>
 
-<div class="container mt-3 border border-success rounded-2">
+<div class="container mt-3 mb-3 border border-success rounded-2">
     <h2 class="text-center mt-3" style="color: #d5820d;">Contact Details</h2>
     <hr />
-    <div class="card">
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-6">
-                Contact details
+    <div class="container px-4 py-5">
+
+    
+        <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-1 px-5 bg-light ">
+
+          <div class="col-6 d-flex flex-column align-items-start gap-3">
+            <h2 class="fw-semibold text-warning-emphasis">Contact us in every famous social platforms</h2>
+            <a href="mailto:support@srisubammatrimony.com" class="btn btn-success" disabled>Contact Now</a>
+          </div>
+    
+          <div class="col">
+            <div class="row row-cols-1 row-cols-sm-2 g-4">
+              <div class="col d-flex flex-column gap-2">
+                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-4 rounded-3">
+                   <a class="link-light" href="#"> <i class="uil uil-instagram fs-1"></i></a>
+                </div>
+                <h5 class="fw-regular mb-0 text-secondary text-center">Instagram</h5>
+                
+              </div>
+    
+              <div class="col d-flex flex-column gap-2">
+                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-4 rounded-3">
+                  <a class="link-light" href="#">  <i class="uil uil-facebook fs-1"></i></a>
+                </div>
+                <h5 class="fw-regular mb-0 text-secondary text-center">Facebook</h5>
+              </div>
+    
+              <div class="col d-flex flex-column gap-2">
+                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-4 rounded-3">
+                   <a class="link-light" href="#"> <i class="uil uil-whatsapp fs-1"></i></a>                
+                </div>
+                <h5 class="fw-regular mb-0 text-secondary text-center">Whatsapp</h5>
+              </div>
+    
+              <div class="col d-flex flex-column gap-2">
+                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-success bg-gradient fs-4 rounded-3">
+                  <a class="link-light" href="#">  <i class="uil uil-envelope fs-1"></i></a>
+                </div>
+                <h5 class="fw-regular mb-0 text-secondary text-center">Email</h5>
+              </div>
             </div>
-            <div class="col-6">
-                Contact details
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 </div>
 {% endblock %}
